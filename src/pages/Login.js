@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import '../css/login_estilos.css'
 
 //dentro de esta variable va la url a la base datos
-const peticionUsuario = ""
+const peticionUsuario = "localhost/:4000"
 
 export default class Login extends Component {
 
@@ -29,8 +29,8 @@ export default class Login extends Component {
 
     iniciarSesion = async() => {
         await axios.get(peticionUsuario,{params:{email: this.state.form.email,password:this.state.form.password}})
-        .then(console.log(""))
-        .catch(console.log(""))
+        .then(console.log("hola dios soy yo de nuevo"))
+        .catch(console.log("hola dios soy yo de nuevo2"))
 
     }
 
@@ -51,7 +51,7 @@ export default class Login extends Component {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="password" className="">Password:</label>
-                                        <input type="text" name="password" id="password" placeholder='***************' className="form-control" onChange={this.handledChange}></input>
+                                        <input type="password" name="password" id="password" placeholder='***************' className="form-control" onChange={this.handledChange}></input>
                                     </div> 
                                     <div className="form-group text-center mt-4">
                                         <a className="btn btn-outline-primary btn-lg btn-block" value="submit" onClick={()=> this.iniciarSesion()}>Submit</a>

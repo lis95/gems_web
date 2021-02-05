@@ -19,7 +19,7 @@ export default class T_board extends Component {
                                 <li className="nav-item"><a href="" className="nav-link text-white">Support Projects</a></li>
                                
                                 </ul>
-                                 <button className="btn btn-primary mt-3">New Proyect</button>
+                                 <button className="btn btn-primary mt-3">New Project</button>
                             </div>
                         </nav>
                         <div className="col-10 altoCompleto">
