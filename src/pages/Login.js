@@ -37,28 +37,28 @@ export default class Login extends Component {
         return(
         <div className="app">
             <div className="card mx-5 my-5">
-            <div className="card-body">
-                <div id="login-row" className="row justify-content-center align-items-center">
-                <div id="login-column" className="col-md-6">
-                    <div id="login-box" className="col-md-12">
-                    <form>
-                        <h3 className="text-center text-info">Login</h3>
-                        <div className="form-group">
-                        <label htmlFor="email" className="text-info">email:</label>
-                        <input type="text" name="email" id="email" className="form-control" onChange={this.handledChange}></input>
+                <div className="card-body">
+                    <div id="login-row" className="row justify-content-center align-items-center">
+                        <div id="login-column" className="col-md-6">
+                            <div id="login-box" className="col-md-12">
+                                <form>
+                                    <h3 className="text-center text-info">Login</h3>
+                                    <div className="form-group">
+                                        <label htmlFor="email" className="text-info">email:</label>
+                                        <input type="text" name="email" id="email" className="form-control" onChange={this.handledChange}></input>
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="password" className="text-info">Password:</label>
+                                        <input type="text" name="password" id="password" className="form-control" onChange={this.handledChange}></input>
+                                    </div> 
+                                    <div className="form-group">
+                                        <button className="btn btn-info btn-md" value="submit" onClick={()=> this.iniciarSesion()}>submit</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div className="form-group">
-                        <label htmlFor="password" className="text-info">Password:</label>
-                        <input type="text" name="password" id="password" className="form-control" onChange={this.handledChange}></input>
-                        </div> 
-                        <div className="form-group">
-                        <button className="btn btn-info btn-md" value="submit" onClick={()=> this.iniciarSesion()}> submit</button>
-                        </div>
-                    </form>
                     </div>
                 </div>
-                </div>
-            </div>
             </div>
         </div>
         )
