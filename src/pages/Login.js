@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import ReactDOM from 'react-dom';
+import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer'; 
 
 //dentro de esta variable va la url a la base datos
 const peticionUsuario = ""
@@ -36,6 +38,9 @@ export default class Login extends Component {
     render(){
         return(
         <div className="app">
+                        <Navbar/> 
+                        
+
             <div className="card mx-5 my-5">
             <div className="card-body">
                 <div id="login-row" className="row justify-content-center align-items-center">
@@ -60,6 +65,7 @@ export default class Login extends Component {
                 </div>
             </div>
             </div>
+            <Footer/>  
         </div>
         )
     }
