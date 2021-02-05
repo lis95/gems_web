@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import Header from '../components/Header'
 import ReactDOM from 'react-dom';
+import '../css/login_estilos.css'
 
 //dentro de esta variable va la url a la base datos
 const peticionUsuario = ""
@@ -23,7 +25,6 @@ export default class Login extends Component {
         })
 
         console.log(this.state.form)
-
     }
 
     iniciarSesion = async() => {
@@ -36,23 +37,24 @@ export default class Login extends Component {
     render(){
         return(
         <div className="app">
-            <div className="card mx-5 my-5">
-                <div className="card-body">
+            <Header />
+            <div className="card mx-auto my-5 loginCard">
+                <div className="card-body ">
                     <div id="login-row" className="row justify-content-center align-items-center">
-                        <div id="login-column" className="col-md-6">
+                        <div id="login-column" className="col-md-12">
                             <div id="login-box" className="col-md-12">
                                 <form>
-                                    <h3 className="text-center text-info">Login</h3>
+                                    <h3 className="text-center mb-5">Sing-in to T-board</h3>
                                     <div className="form-group">
-                                        <label htmlFor="email" className="text-info">email:</label>
-                                        <input type="text" name="email" id="email" className="form-control" onChange={this.handledChange}></input>
+                                        <label htmlFor="email" className="">Email:</label>
+                                        <input type="text" name="email" id="email" placeholder='Ejemplo123@gmail.com' className="form-control" onChange={this.handledChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="password" className="text-info">Password:</label>
-                                        <input type="text" name="password" id="password" className="form-control" onChange={this.handledChange}></input>
+                                        <label htmlFor="password" className="">Password:</label>
+                                        <input type="text" name="password" id="password" placeholder='***************' className="form-control" onChange={this.handledChange}></input>
                                     </div> 
-                                    <div className="form-group">
-                                        <button className="btn btn-info btn-md" value="submit" onClick={()=> this.iniciarSesion()}>submit</button>
+                                    <div className="form-group text-center mt-4">
+                                        <a className="btn btn-outline-primary btn-lg btn-block" value="submit" onClick={()=> this.iniciarSesion()}>Submit</a>
                                     </div>
                                 </form>
                             </div>
