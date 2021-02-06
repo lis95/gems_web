@@ -1,0 +1,14 @@
+button {
+margin: 0 6px 0 0;
+}
+
+.boton {
+    background: #335ac7 ;
+}
+.content-nav {
+    display: flex;
+}
+.navColor {
+    color: #324e9c;
+    font-weight: bold;
+}
